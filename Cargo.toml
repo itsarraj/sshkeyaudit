@@ -1,0 +1,27 @@
+[package]
+name = "sshkeyaudit"
+version = "0.1.0"
+edition = "2021"
+description = "Scans an authorized_keys file or a directory of .pub files and flags weak SSH key types and sizes"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/sshkeyaudit"
+readme = "README.md"
+keywords = ["ssh", "security", "authorized_keys", "audit", "cli"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "sshkeyaudit"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sshkeyaudit"
+path = "src/main.rs"
+
+[dependencies]
+base64 = "0.22"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+
+[dev-dependencies]
+tempfile = "3"
