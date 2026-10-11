@@ -8,6 +8,12 @@ approach is a shell one-liner piping `ssh-keygen -lf` output through
 `awk`, or trusting whatever your config-management tool happens to
 enforce.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
